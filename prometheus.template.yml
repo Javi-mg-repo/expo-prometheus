@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 2s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets:
+          - prometheus:9090
+
+  - job_name: '${CLUSTER_NAME}'
+    metrics_path: /driver-proxy-api/o/0/${CLUSTER_ID}/40001/metrics/prometheus/
+    static_configs:
+      - targets:
+          - '${DATABRICKS_URL}'
+    authorization:
+      type: Bearer
+      credentials: '${TOKEN}'

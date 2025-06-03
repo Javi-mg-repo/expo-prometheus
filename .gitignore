@@ -1,0 +1,26 @@
+# Ignorar archivos de configuración generados
+prometheus.yml
+.env
+
+# Archivos temporales de PowerShell
+*.ps1~
+
+# Logs y backups
+*.log
+*.bak
+
+# Docker
+**/docker-compose.override.yml
+**/.docker/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio Code
+.vscode/
+
+# Archivos temporales del sistema
+~$*
+*.swp
