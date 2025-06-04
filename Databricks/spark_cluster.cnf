@@ -1,0 +1,3 @@
+# AÑADIR A LA CONFIGURACIÓN DE SPARK DEL CLUSTER
+spark.ui.prometheus.enabled true
+spark.metrics.namespace spark-metrics
